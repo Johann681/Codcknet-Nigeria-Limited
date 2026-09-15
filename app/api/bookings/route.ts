@@ -3,8 +3,16 @@ import { NextResponse } from "next/server";
 import { addBooking, listBookings } from "@/lib/booking-store";
 
 export async function GET() {
-  const bookings = await listBookings();
-  return NextResponse.json({ success: true, bookings });
+  try {
+    const bookings = await listBookings();
+    return NextResponse.json({ success: true, bookings });
+  } catch (error) {
+    console.error("Bookings GET failed:", error);
+    return NextResponse.json(
+      { success: false, message: "Booking storage is unavailable. Check the MongoDB connection." },
+      { status: 503 },
+    );
+  }
 }
 
 export async function POST(request: Request) {
@@ -32,10 +40,11 @@ export async function POST(request: Request) {
       },
       { status: 201 },
     );
-  } catch {
+  } catch (error) {
+    console.error("Bookings POST failed:", error);
     return NextResponse.json(
-      { success: false, message: "Could not save your booking request." },
-      { status: 500 },
+      { success: false, message: "Booking storage is unavailable. Check the MongoDB connection." },
+      { status: 503 },
     );
   }
 }
