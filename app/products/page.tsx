@@ -334,10 +334,11 @@ export default function ProductsPage() {
           </div>
           <div>
             <h4>Connect with us</h4>
-            <a href="mailto:codcknetinstallation@gmail.com">
-              codcknetinstallation@gmail.com
+            <a href="mailto:info@codcknet.com">
+              info@codcknet.com
             </a>
-            <a href="tel:+2349099522825">+234 909 952 2825</a>
+            <a href="tel:+2347040272129">+234 704 027 2129</a>
+            <a href="tel:+2347074526007">+234 707 452 6007</a>
             <span>Nigeria</span>
           </div>
           <div>
