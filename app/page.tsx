@@ -92,8 +92,8 @@ export default function Home() {
             <a href="/products" onClick={() => setMenuOpen(false)}>
               Products
             </a>
-            <a href="/book-online" onClick={() => setMenuOpen(false)}>
-              Book Online
+            <a href="/book-online#contact" onClick={() => setMenuOpen(false)}>
+              Contact Us
             </a>
           </nav>
           <div className="header-tools">
@@ -138,7 +138,7 @@ export default function Home() {
             solutions for individuals, transport companies, and organizations
             across Nigeria.
           </p>
-          <a className="hero-button" href="#contact">
+          <a className="hero-button" href="/book-online">
             GET STARTED <ArrowDownRight size={17} />
           </a>
           <div className="hero-footnote">
@@ -178,7 +178,7 @@ export default function Home() {
               Nigeria, we deliver more than just products. We deliver peace of
               mind.
             </p>
-            <a className="outline-button" href="#contact">
+            <a className="outline-button" href="/book-online">
               READ MORE <ArrowRight size={16} />
             </a>
             <div className="about-stats">
@@ -225,7 +225,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <a className="outline-button centered-button" href="#contact">
+          <a className="outline-button centered-button" href="/book-online">
             SEE ALL CERTIFICATIONS <ArrowRight size={16} />
           </a>
         </div>
@@ -261,7 +261,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <a className="service-link" href="#contact">
+          <a className="service-link" href="/book-online">
             View Full Service List <ArrowRight size={16} />
           </a>
         </div>
@@ -283,11 +283,8 @@ export default function Home() {
               Talk to a Codcknet specialist about your vehicles, routes, and
               fleet.
             </p>
-            <a
-              className="hero-button"
-              href="mailto:codcknetinstallation@gmail.com"
-            >
-              BOOK ONLINE <ArrowRight size={16} />
+            <a className="hero-button" href="/book-online#contact">
+              CONTACT US <ArrowRight size={16} />
             </a>
           </div>
           <iframe
@@ -327,7 +324,7 @@ export default function Home() {
             <a href="#about-us">About Us</a>
             <a href="#services">Service List</a>
             <a href="#products">Products</a>
-            <a href="#contact">Book Online</a>
+            <a href="/book-online#contact">Contact Us</a>
           </div>
         </div>
         <div className="site-width footer-bottom">

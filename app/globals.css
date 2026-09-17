@@ -2674,7 +2674,7 @@ button {
 }
 .booking-card-body p {
   min-height: 57px;
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   color: #8997a9;
   font-size: 10px;
   line-height: 1.8;
@@ -2704,7 +2704,9 @@ button {
 .booking-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
+  width: 100%;
   min-height: 35px;
   padding: 0 12px;
   color: #fff;
@@ -2766,9 +2768,10 @@ button {
   background: linear-gradient(105deg, #0d213c, #102d55);
 }
 .booking-contact-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
+  gap: 34px;
 }
 .booking-contact h2 {
   margin: 18px 0 15px;
@@ -2798,6 +2801,76 @@ button {
 }
 .booking-contact-links svg {
   color: #73adff;
+}
+.booking-lead-card {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.85fr) minmax(300px, 1.15fr);
+  grid-column: 1 / -1;
+  gap: 34px;
+  padding: 30px;
+  background: #09192bd9;
+  border: 1px solid #4a6d9a;
+  box-shadow: 0 22px 55px #06101d44;
+}
+.lead-card-kicker {
+  color: #71e0ad;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.booking-lead-card h3 {
+  max-width: 250px;
+  margin: 16px 0 11px;
+  color: #fff;
+  font-size: 27px;
+  line-height: 1.05;
+  letter-spacing: -0.07em;
+}
+.booking-lead-card p {
+  max-width: 260px;
+  margin: 0;
+}
+.booking-lead-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  align-content: center;
+}
+.booking-lead-form label {
+  display: grid;
+  gap: 7px;
+  color: #c7d5e5;
+  font-size: 9px;
+  font-weight: 800;
+}
+.booking-lead-form input,
+.booking-lead-form select {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  color: #fff;
+  background: #172b42;
+  border: 1px solid #416080;
+  border-radius: 4px;
+  outline: none;
+  font: inherit;
+  font-size: 10px;
+}
+.booking-lead-form input:focus,
+.booking-lead-form select:focus {
+  border-color: #48d597;
+  box-shadow: 0 0 0 2px #48d59744;
+}
+.booking-lead-form select option {
+  color: #fff;
+  background: #172b42;
+}
+.booking-lead-form .hero-button {
+  align-self: end;
+  min-height: 43px;
+  border: 0;
+  cursor: pointer;
 }
 .booking-modal-backdrop {
   position: fixed;
@@ -2860,6 +2933,18 @@ button {
   border: 1px solid #334b68;
   border-radius: 4px;
   outline: none;
+  font-size: 10px;
+}
+.booking-modal textarea {
+  min-height: 76px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #17263a;
+  border: 1px solid #334b68;
+  border-radius: 4px;
+  outline: none;
+  resize: vertical;
+  font: inherit;
   font-size: 10px;
 }
 .booking-modal .hero-button {
@@ -2932,6 +3017,14 @@ button {
     max-width: 100%;
     margin-top: 32px;
   }
+  .booking-lead-card {
+    display: block;
+    margin-top: 32px;
+  }
+  .booking-lead-form {
+    grid-template-columns: 1fr;
+    margin-top: 25px;
+  }
 }
 @media (max-width: 430px) {
   .assurance-steps {
@@ -2953,7 +3046,7 @@ button {
 .kit-photo,
 .tracker-photo {
   position: relative;
-  min-height: 410px;
+  min-height: 520px;
   background-position: center;
   background-size: cover;
 }
@@ -2973,6 +3066,11 @@ button {
 }
 .tracker-photo {
   min-height: 250px;
+}
+.products-page .tracker-photo {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .tracker-photo:after {
   content: "GPS TRACKING / MOTORCYCLE / CAR / COMMERCIAL";
@@ -3775,7 +3873,7 @@ html[data-theme="light"] .main-nav.open {
   }
   .products-page .kit-photo,
   .products-page .tracker-photo {
-    min-height: 300px;
+    min-height: 380px;
   }
 }
 

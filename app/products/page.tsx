@@ -28,26 +28,6 @@ const scannerFunctions = [
   ["O2 Sensor Test", Radio],
 ] as const;
 
-const fleetDevices = [
-  [
-    "AIS 140 IRNSS Device",
-    "A rugged, standards-ready tracking unit for commercial fleets that need dependable location intelligence and compliance visibility.",
-    "/images/Ais140.jpg",
-    "01",
-  ],
-  [
-    "Blackbox TM 65",
-    "A discreet fleet blackbox built for route history, driver behavior insights, and reliable event reporting.",
-    "/images/Black-box-tm-65.jpg",
-    "02",
-  ],
-  [
-    "Blackbox TM 33 PLUS",
-    "Connected hardware for practical vehicle oversight, speed alerts, geofencing, and responsive fleet control.",
-    "/images/Black-box-tm-33.jpg",
-    "03",
-  ],
-] as const;
 
 export default function ProductsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -72,7 +52,7 @@ export default function ProductsPage() {
             <a className="active" href="/products">
               Products
             </a>
-            <a href="/book-online">Book Online</a>
+            <a href="/book-online#contact">Contact Us</a>
           </nav>
           <div className="header-tools">
             <ThemeToggle />
@@ -141,7 +121,7 @@ export default function ProductsPage() {
                 className="kit-photo"
                 style={{
                   backgroundImage:
-                    "linear-gradient(180deg, #07111d11, #07111db0), url('/images/sabo-speed-limiter.jpeg')",
+                    "linear-gradient(180deg, #07111d11, #07111db0), url('/images/vehicle speedlimiter device.jpeg')",
                 }}
               >
                 <span>COMPLETE SABO KIT</span>
@@ -168,7 +148,7 @@ export default function ProductsPage() {
                     <Radio size={15} /> GPS-ready architecture
                   </span>
                 </div>
-                <a className="product-link" href="/#contact">
+                <a className="product-link" href="/book-online">
                   Request this product <ArrowRight size={15} />
                 </a>
               </div>
@@ -178,7 +158,7 @@ export default function ProductsPage() {
                 className="tracker-photo"
                 style={{
                   backgroundImage:
-                    "linear-gradient(180deg, #07111d11, #07111db0), url('/images/route.jpg')",
+                    "linear-gradient(180deg, #07111d11, #07111d55), url('/images/codcknet gps tracker.jpeg')",
                 }}
               >
                 <span>UNIVERSAL GPS TRACKER</span>
@@ -199,7 +179,7 @@ export default function ProductsPage() {
                   <span>Cars</span>
                   <span>Commercial</span>
                 </div>
-                <a className="product-link" href="/#contact">
+                <a className="product-link" href="/book-online">
                   View tracking options <ArrowRight size={15} />
                 </a>
               </div>
@@ -208,48 +188,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className="fleet-devices-section">
-        <div className="site-width">
-          <div className="hardware-heading fleet-heading">
-            <div>
-              <span className="dark-kicker">
-                <i /> Fleet intelligence
-              </span>
-              <h2>
-                Built for the
-                <br />
-                <span>long haul.</span>
-              </h2>
-            </div>
-            <p>
-              Industrial tracking hardware for companies that need more than a
-              pin on a map.
-            </p>
-          </div>
-          <div className="fleet-device-grid">
-            {fleetDevices.map(([title, description, image, number]) => (
-              <article className="fleet-device-card" key={title}>
-                <div
-                  className="fleet-device-image"
-                  style={{
-                    backgroundImage: `linear-gradient(180deg, #07111d22, #07111ddd), url(${image})`,
-                  }}
-                >
-                  <span>{number}</span>
-                  <Radar size={24} />
-                </div>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <a className="product-link" href="/#contact">
-                    Explore device <ArrowRight size={14} />
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="scanner-section">
         <div className="site-width scanner-layout">
@@ -369,8 +307,8 @@ export default function ProductsPage() {
               Tell us what you drive, where you operate, and what you need to
               monitor. We&apos;ll guide you to the right device.
             </p>
-            <a className="hero-button" href="/#contact">
-              BOOK ONLINE <ArrowRight size={16} />
+            <a className="hero-button" href="/book-online#contact">
+              CONTACT US <ArrowRight size={16} />
             </a>
           </div>
           <div className="product-cta-radar">

@@ -21,16 +21,20 @@ export async function POST(request: Request) {
 
     const name = typeof body?.name === "string" ? body.name.trim() : "";
     const phone = typeof body?.phone === "string" ? body.phone.trim() : "";
+    const email = typeof body?.email === "string" ? body.email.trim() : "";
+    const company = typeof body?.company === "string" ? body.company.trim() : "";
+    const vehicle = typeof body?.vehicle === "string" ? body.vehicle.trim() : "";
+    const message = typeof body?.message === "string" ? body.message.trim() : "";
     const service = typeof body?.service === "string" ? body.service.trim() : "";
 
-    if (!name || !phone || !service) {
+    if (!name || !phone || !email || !service) {
       return NextResponse.json(
-        { success: false, message: "Name, phone, and service are required." },
+        { success: false, message: "Name, phone, email, and service are required." },
         { status: 400 },
       );
     }
 
-    const booking = await addBooking({ name, phone, service });
+    const booking = await addBooking({ name, phone, email, company, vehicle, message, service });
 
     return NextResponse.json(
       {

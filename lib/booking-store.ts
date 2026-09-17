@@ -7,6 +7,10 @@ export type BookingRecord = {
   id?: string;
   name: string;
   phone: string;
+  email?: string;
+  company?: string;
+  vehicle?: string;
+  message?: string;
   service: string;
   createdAt: string;
 };
@@ -23,7 +27,7 @@ export async function listBookings(): Promise<BookingRecord[]> {
   }));
 }
 
-export async function addBooking(input: { name: string; phone: string; service: string }): Promise<BookingRecord> {
+export async function addBooking(input: { name: string; phone: string; email: string; company: string; vehicle: string; message: string; service: string }): Promise<BookingRecord> {
   const db = await getDb();
   const collection = db.collection<BookingRecord>("bookings");
 
@@ -31,6 +35,10 @@ export async function addBooking(input: { name: string; phone: string; service: 
     id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
     name: input.name.trim(),
     phone: input.phone.trim(),
+    email: input.email.trim(),
+    company: input.company.trim(),
+    vehicle: input.vehicle.trim(),
+    message: input.message.trim(),
     service: input.service.trim(),
     createdAt: new Date().toISOString(),
   };
