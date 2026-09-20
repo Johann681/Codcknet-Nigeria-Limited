@@ -79,7 +79,7 @@ export default function ProductsPage() {
             <i /> Hardware / vehicle intelligence
           </span>
           <h1>
-            Our <span>Products.</span>
+            Our <span>Products. </span>
           </h1>
           <p>
             We supply government-approved speed limiters, GPS trackers, and
@@ -124,14 +124,14 @@ export default function ProductsPage() {
                     "linear-gradient(180deg, #07111d11, #07111db0), url('/images/vehicle speedlimiter device.jpeg')",
                 }}
               >
-                <span>COMPLETE SABO KIT</span>
+                
               </div>
               <div className="kit-copy">
                 <span className="product-tag">01 / FEATURED KIT</span>
                 <h3>
-                  Sabo Vehicle
+                  Codcknet Vehicle
                   <br />
-                  <span>Speed Limiter Kit</span>
+                  <span>Speed Limiter Device</span>
                 </h3>
                 <p>
                   A complete, calibrated solution for controlled vehicle speed
@@ -161,14 +161,14 @@ export default function ProductsPage() {
                     "linear-gradient(180deg, #07111d11, #07111d55), url('/images/codcknet gps tracker.jpeg')",
                 }}
               >
-                <span>UNIVERSAL GPS TRACKER</span>
+               
               </div>
               <div>
                 <span className="product-tag">02 / UNIVERSAL TRACKING</span>
                 <h3>
-                  Compact GPS
+                  Codcknet GPS
                   <br />
-                  <span>Tracker Units</span>
+                  <span>Tracker Device</span>
                 </h3>
                 <p>
                   Discrete, reliable tracking for motorcycles, cars, and
@@ -189,54 +189,11 @@ export default function ProductsPage() {
       </section>
 
 
-      <section className="scanner-section">
-        <div className="site-width scanner-layout">
-          <div className="scanner-copy">
-            <span className="dark-kicker">
-              <i /> Diagnostics / workshop tools
-            </span>
-            <h2>
-              Know what&apos;s
-              <br />
-              <span>under the hood.</span>
-            </h2>
-            <p>
-              The Autel AL538B gives technicians a clear starting point for
-              diagnostics, maintenance decisions, and faster issue resolution.
-            </p>
-            <div
-              className="scanner-photo"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, #07111d11, #07111d55), url('/images/autel-al539b.jpeg')",
-              }}
-            />
-          </div>
-          <div className="scanner-functions">
-            <div className="scanner-heading">
-              <span className="product-tag">AUTEL AL538B SCAN TOOL</span>
-              <h3>Essential OBDII functions</h3>
-              <p>Professional insight without the guesswork.</p>
-            </div>
-            <div className="function-grid">
-              {scannerFunctions.map(([title, Icon]) => (
-                <div className="function-item" key={title}>
-                  <i>
-                    <Icon size={17} />
-                  </i>
-                  <span>{title}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="feature-section">
         <div className="site-width">
           <div className="center-heading">
             <span className="dark-kicker">
-              <i /> Connected by design
+              <i /> Connected by design 
             </span>
             <h2>
               Control the details

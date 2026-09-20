@@ -59,7 +59,7 @@ const services = [
     "Driver Compliance & Safety Training",
     "Guidance for drivers and organizations to improve safety protocols, accountability, and operational compliance.",
     CheckCircle2,
-    "/images/driver-compliance-safety-training.jpg",
+    "/images/Driver Compliance& safetyTraining.jpg",
   ],
 ] as const;
 
@@ -168,7 +168,7 @@ export default function ServicesPage() {
                 <div
                   className="catalog-image"
                   style={{
-                    backgroundImage: `linear-gradient(180deg, #08132122, #081321dd), url(${image})`,
+                    backgroundImage: `linear-gradient(180deg, #08132122, #081321dd), url("${image}")`,
                   }}
                 >
                   <span>{number}</span>
