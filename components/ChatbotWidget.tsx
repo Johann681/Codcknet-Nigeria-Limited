@@ -226,15 +226,28 @@ export default function ChatbotWidget() {
 
       if (response.ok) {
         const data = await response.json();
-        const assistantText = data?.response || data?.answer || data?.message;
+        let assistantText = data?.response || data?.answer || data?.message;
 
         if (typeof assistantText === "string" && assistantText.trim()) {
+          let cleanContent = assistantText.trim();
+          let actionLink: { label: string; url: string; external?: boolean } | undefined = undefined;
+
+          if (cleanContent.includes("REDIRECT_WHATSAPP")) {
+            cleanContent = cleanContent.replace(/REDIRECT_WHATSAPP/g, "").trim();
+            actionLink = {
+              label: "Chat with Admin on WhatsApp (+234 707 452 6007)",
+              url: `https://wa.me/2347074526007?text=${encodeURIComponent("Hello Codcknet Admin, I have an enquiry: " + text)}`,
+              external: true,
+            };
+          }
+
           setMessages([
             ...updatedHistory,
             {
               role: "assistant",
-              content: assistantText.trim(),
-              suggestions: ["Ask another question", "Chat on WhatsApp", "Book installation"],
+              content: cleanContent,
+              actionLink,
+              suggestions: actionLink ? ["Chat on WhatsApp", "Ask about Speed Limiters", "Ask about GPS Tracking"] : ["Ask another question", "Talk to Admin on WhatsApp", "How to book installation"],
             },
           ]);
           return;
