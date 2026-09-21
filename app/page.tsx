@@ -214,7 +214,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <a className="service-link" href="/book-online">
+          <a className="service-link" href="/services">
             View Full Service List <ArrowRight size={16} />
           </a>
         </div>
@@ -270,6 +270,7 @@ export default function Home() {
               info@codcknet.com
             </a>
             <a href="tel:+2347040272129">+234 704 027 2129</a>
+            <a href="tel:+2349099522825">+234 909 952 2825</a>
             <a href="tel:+2347074526007">+234 707 452 6007</a>
             <div className="mt-2 pt-1">
               <NavSocials />

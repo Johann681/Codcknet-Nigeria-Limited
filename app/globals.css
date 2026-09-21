@@ -3355,7 +3355,7 @@ html[data-theme="light"] .nav-social-btn:hover {
   content: "";
 }
 .kit-photo:after {
-  content: "SABO SPEED LIMITER / CONTROL BOX / WIRING / GPS ANTENNA";
+  content: none;
 }
 .tracker-photo {
   min-height: 250px;
@@ -3366,7 +3366,7 @@ html[data-theme="light"] .nav-social-btn:hover {
   background-size: contain;
 }
 .tracker-photo:after {
-  content: "GPS TRACKING / MOTORCYCLE / CAR / COMMERCIAL";
+  content: none;
 }
 .scanner-photo {
   width: 100%;

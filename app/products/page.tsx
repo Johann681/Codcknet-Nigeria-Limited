@@ -70,9 +70,8 @@ export default function ProductsPage() {
               </h2>
             </div>
             <p>
-              From a single car or motorcycle to a national transport fleet, we
-              fit the hardware that makes your operation visible and
-              accountable.
+              We supply and install the hardware that makes your operation
+              visible, safer, and accountable.
             </p>
           </div>
           <div className="hardware-showcase">
@@ -131,14 +130,9 @@ export default function ProductsPage() {
                   <span>Tracker Device</span>
                 </h3>
                 <p>
-                  Discrete, reliable tracking for motorcycles, cars, and
-                  commercial vehicles.
+                  Discrete, reliable GPS tracking for vehicles and fleet
+                  operations.
                 </p>
-                <div className="tracker-types">
-                  <span>Motorcycles</span>
-                  <span>Cars</span>
-                  <span>Commercial</span>
-                </div>
                 <a className="product-link" href="/book-online">
                   Request this product <ArrowRight size={15} />
                 </a>
@@ -262,6 +256,7 @@ export default function ProductsPage() {
               info@codcknet.com
             </a>
             <a href="tel:+2347040272129">+234 704 027 2129</a>
+            <a href="tel:+2349099522825">+234 909 952 2825</a>
             <a href="tel:+2347074526007">+234 707 452 6007</a>
             <div className="mt-2 pt-1">
               <NavSocials />
