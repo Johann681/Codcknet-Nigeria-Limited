@@ -1,19 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import {
   ArrowDownRight,
   ArrowRight,
   BadgeCheck,
+  Cctv,
   ChevronRight,
-  Menu,
   Navigation,
   ShieldCheck,
   Truck,
   Wrench,
-  X,
 } from "lucide-react";
-import ThemeToggle from "@/components/theme-toggle";
+import NavSocials from "@/components/NavSocials";
 
 const services = [
   [
@@ -30,9 +28,9 @@ const services = [
   ],
   [
     "03",
-    "Fleet Management",
-    "Optimize performance, reduce risk, and improve efficiency with complete fleet monitoring.",
-    Truck,
+    "Surveillance & CCTV Solutions",
+    "High-definition video monitoring and smart security systems to protect assets, manage access, and deter unauthorized activity.",
+    Cctv,
   ],
   [
     "04",
@@ -64,53 +62,8 @@ const authorities = [
 ] as const;
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main className="dark-site">
-      <header className="site-header">
-        <div className="site-width header-inner">
-          <a className="brand dark-brand" href="#home">
-            <img
-              className="brand-mark"
-              src="/images/image.png"
-              alt="Codcknet logo"
-            />
-            <span className="brand-name">
-              Codcknet <small>Nigeria Limited</small>
-            </span>
-          </a>
-          <nav className={menuOpen ? "main-nav open" : "main-nav"}>
-            <a href="#home" onClick={() => setMenuOpen(false)}>
-              Home
-            </a>
-            <a href="/about-us" onClick={() => setMenuOpen(false)}>
-              About Us
-            </a>
-            <a href="/services" onClick={() => setMenuOpen(false)}>
-              Service List
-            </a>
-            <a href="/products" onClick={() => setMenuOpen(false)}>
-              Products
-            </a>
-            <a href="/book-online#contact" onClick={() => setMenuOpen(false)}>
-              Contact Us
-            </a>
-          </nav>
-          <div className="header-tools">
-            <ThemeToggle />
-            <a className="header-action" href="/book-online">
-              Get started <ArrowRight size={15} />
-            </a>
-          </div>
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={21} /> : <Menu size={21} />}
-          </button>
-        </div>
-      </header>
       <section className="dark-hero" id="home">
         <video
           className="hero-video"
@@ -225,7 +178,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <a className="outline-button centered-button" href="/book-online">
+          <a className="outline-button centered-button" href="/certificates">
             SEE ALL CERTIFICATIONS <ArrowRight size={16} />
           </a>
         </div>
@@ -318,13 +271,17 @@ export default function Home() {
             </a>
             <a href="tel:+2347040272129">+234 704 027 2129</a>
             <a href="tel:+2347074526007">+234 707 452 6007</a>
+            <div className="mt-2 pt-1">
+              <NavSocials />
+            </div>
             <span>Nigeria</span>
           </div>
           <div>
             <h4>Additional links</h4>
-            <a href="#about-us">About Us</a>
-            <a href="#services">Service List</a>
-            <a href="#products">Products</a>
+            <a href="/about-us">About Us</a>
+            <a href="/services">Service List</a>
+            <a href="/products">Products</a>
+            <a href="/certificates">Certificates</a>
             <a href="/book-online#contact">Contact Us</a>
           </div>
         </div>

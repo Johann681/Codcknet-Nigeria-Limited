@@ -58,7 +58,7 @@ const FAQ_LIST: FAQItem[] = [
     category: "booking",
     question: "How do I book an installation for my vehicle or fleet?",
     answer:
-      "You can book directly via our 'Book Online' page or reach out instantly on WhatsApp at 07040272129 or 07074526007. We offer both on-site mobile installations at your premises and workshop appointments across Nigeria.",
+      "You can book directly via our 'Book Online' page or reach out instantly on WhatsApp at 07074526007 or call 07040272129. We offer both on-site mobile installations at your premises and workshop appointments across Nigeria.",
     tags: ["book", "booking", "install", "installation", "schedule", "whatsapp", "phone", "location"],
   },
   {
@@ -106,10 +106,10 @@ function findLocalAnswer(query: string): { answer: string; link?: { label: strin
 
   if (/whatsapp|chat|phone|call|contact|number/.test(q)) {
     return {
-      answer: "You can reach our team directly on WhatsApp or phone:\n• WhatsApp / Call: +234 704 027 2129\n• WhatsApp / Call: +234 707 452 6007\n• Email: info@codcknet.com",
+      answer: "You can reach our team directly on WhatsApp or phone:\n• WhatsApp: +234 707 452 6007\n• Phone / Helpline: +234 704 027 2129\n• Email: info@codcknet.com",
       link: {
-        label: "Chat on WhatsApp (+234 704 027 2129)",
-        url: "https://wa.me/2347040272129?text=Hello%20Codcknet,%20I%20have%20an%20enquiry",
+        label: "Chat on WhatsApp (+234 707 452 6007)",
+        url: "https://wa.me/2347074526007?text=Hello%20Codcknet,%20I%20have%20an%20enquiry",
         external: true,
       },
     };
@@ -134,7 +134,7 @@ function findLocalAnswer(query: string): { answer: string; link?: { label: strin
         answer: item.answer,
         link: {
           label: "Discuss with an expert on WhatsApp",
-          url: "https://wa.me/2347040272129",
+          url: "https://wa.me/2347074526007",
           external: true,
         },
       };
@@ -268,8 +268,8 @@ export default function ChatbotWidget() {
         content:
           "Thank you for reaching out! For specific questions about speed limiters, GPS tracking devices, pricing, or fleet setups, our engineering support team is readily available on WhatsApp and phone.",
         actionLink: {
-          label: "Chat with Engineer on WhatsApp (+234 704 027 2129)",
-          url: `https://wa.me/2347040272129?text=${encodeURIComponent("Hello Codcknet, I have an enquiry: " + text)}`,
+          label: "Chat with Engineer on WhatsApp (+234 707 452 6007)",
+          url: `https://wa.me/2347074526007?text=${encodeURIComponent("Hello Codcknet, I have an enquiry: " + text)}`,
           external: true,
         },
         suggestions: ["FRSC Speed Limiters", "GPS Tracking Features", "How to Book"],
@@ -450,7 +450,7 @@ export default function ChatbotWidget() {
                                 <Sparkles size={11} /> Ask in chat
                               </button>
                               <a
-                                href={`https://wa.me/2347040272129?text=${encodeURIComponent(
+                                href={`https://wa.me/2347074526007?text=${encodeURIComponent(
                                   "Hello Codcknet, regarding: " + faq.question
                                 )}`}
                                 target="_blank"
@@ -471,7 +471,7 @@ export default function ChatbotWidget() {
               {/* Quick Contact Footer Banner */}
               <div className="p-2.5 bg-[#0b1420] border-t border-[rgba(148,163,184,0.14)] flex items-center justify-between gap-2">
                 <a
-                  href="https://wa.me/2347040272129?text=Hello%20Codcknet%20Team,%20I%20have%20an%20enquiry."
+                  href="https://wa.me/2347074526007?text=Hello%20Codcknet%20Team,%20I%20have%20an%20enquiry."
                   target="_blank"
                   rel="noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-[6px] bg-[#142333] border border-[#2f5c97] hover:bg-[#1b3555] text-white text-[10px] font-extrabold uppercase tracking-wider transition-colors"

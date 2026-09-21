@@ -1,22 +1,20 @@
 "use client";
 
-import { useState } from "react";
 import {
   ArrowRight,
   BadgeCheck,
+  Cctv,
   CheckCircle2,
   ChevronRight,
   Gauge,
-  Menu,
   Navigation,
   Radar,
   Route,
   ShieldCheck,
   Truck,
   Wrench,
-  X,
 } from "lucide-react";
-import ThemeToggle from "@/components/theme-toggle";
+import NavSocials from "@/components/NavSocials";
 
 const services = [
   [
@@ -35,10 +33,10 @@ const services = [
   ],
   [
     "03",
-    "Fleet Management Solutions",
-    "Comprehensive systems for transport companies to manage vehicles, drivers, routes, performance, and risk.",
-    Truck,
-    "/images/fleet-management.jpg",
+    "Surveillance & CCTV Solutions",
+    "High-definition video monitoring and smart security systems to protect assets, manage access, and deter unauthorized activity.",
+    Cctv,
+    "/images/fleet-management.jpeg",
   ],
   [
     "04",
@@ -64,46 +62,8 @@ const services = [
 ] as const;
 
 export default function ServicesPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main className="services-page dark-site">
-      <header className="site-header">
-        <div className="site-width header-inner">
-          <a className="brand dark-brand" href="/">
-            <img
-              className="brand-mark"
-              src="/images/image.png"
-              alt="Codcknet logo"
-            />
-            <span className="brand-name">
-              Codcknet <small>Nigeria Limited</small>
-            </span>
-          </a>
-          <nav className={menuOpen ? "main-nav open" : "main-nav"}>
-            <a href="/">Home</a>
-            <a href="/about-us">About Us</a>
-            <a className="active" href="/services">
-              Service List
-            </a>
-            <a href="/products">Products</a>
-            <a href="/book-online#contact">Contact Us</a>
-          </nav>
-          <div className="header-tools">
-            <ThemeToggle />
-            <a className="header-action" href="/book-online">
-              Get started <ArrowRight size={15} />
-            </a>
-          </div>
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={21} /> : <Menu size={21} />}
-          </button>
-        </div>
-      </header>
-
       <section className="services-hero">
         <div className="services-hero-image" />
         <div className="services-hero-overlay" />
@@ -287,6 +247,9 @@ export default function ServicesPage() {
             </a>
             <a href="tel:+2347040272129">+234 704 027 2129</a>
             <a href="tel:+2347074526007">+234 707 452 6007</a>
+            <div className="mt-2 pt-1">
+              <NavSocials />
+            </div>
             <span>Nigeria</span>
           </div>
           <div>
@@ -294,6 +257,8 @@ export default function ServicesPage() {
             <a href="/">Home</a>
             <a href="/about-us">About Us</a>
             <a href="/services">Service List</a>
+            <a href="/products">Products</a>
+            <a href="/certificates">Certificates</a>
             <a href="/book-online#contact">Contact Us</a>
           </div>
         </div>

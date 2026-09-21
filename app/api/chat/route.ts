@@ -259,7 +259,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: false,
-        message: "The AI service is currently busy. Please feel free to reach out directly via WhatsApp at +234 704 027 2129.",
+        message: "The AI service is currently busy. Please feel free to reach out directly via WhatsApp at +234 707 452 6007.",
       },
       { status: 502 },
     );

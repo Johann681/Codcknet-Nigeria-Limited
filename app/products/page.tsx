@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   ArrowRight,
   BadgeCheck,
@@ -8,16 +7,15 @@ import {
   ChevronRight,
   Gauge,
   MapPin,
-  Menu,
   Radar,
   Radio,
   ScanLine,
   ShieldCheck,
   Signal,
+  Sparkles,
   Truck,
-  X,
 } from "lucide-react";
-import ThemeToggle from "@/components/theme-toggle";
+import NavSocials from "@/components/NavSocials";
 
 const scannerFunctions = [
   ["Read Codes", ScanLine],
@@ -30,46 +28,8 @@ const scannerFunctions = [
 
 
 export default function ProductsPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main className="products-page dark-site">
-      <header className="site-header">
-        <div className="site-width header-inner">
-          <a className="brand dark-brand" href="/">
-            <img
-              className="brand-mark"
-              src="/images/image.png"
-              alt="Codcknet logo"
-            />
-            <span className="brand-name">
-              Codcknet <small>Nigeria Limited</small>
-            </span>
-          </a>
-          <nav className={menuOpen ? "main-nav open" : "main-nav"}>
-            <a href="/">Home</a>
-            <a href="/about-us">About Us</a>
-            <a href="/services">Service List</a>
-            <a className="active" href="/products">
-              Products
-            </a>
-            <a href="/book-online#contact">Contact Us</a>
-          </nav>
-          <div className="header-tools">
-            <ThemeToggle />
-            <a className="header-action" href="/book-online">
-              Get started <ArrowRight size={15} />
-            </a>
-          </div>
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={21} /> : <Menu size={21} />}
-          </button>
-        </div>
-      </header>
-
       <section className="products-hero">
         <div className="products-hero-image" />
         <div className="products-hero-overlay" />
@@ -180,7 +140,7 @@ export default function ProductsPage() {
                   <span>Commercial</span>
                 </div>
                 <a className="product-link" href="/book-online">
-                  View tracking options <ArrowRight size={15} />
+                  Request this product <ArrowRight size={15} />
                 </a>
               </div>
             </article>
@@ -245,6 +205,13 @@ export default function ProductsPage() {
                 notifications.
               </span>
             </div>
+            <div>
+              <Sparkles size={21} />
+              <b>And many more</b>
+              <span>
+                Fuel monitoring, driver behavior analytics, SOS alerts, and custom fleet capabilities.
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -296,6 +263,9 @@ export default function ProductsPage() {
             </a>
             <a href="tel:+2347040272129">+234 704 027 2129</a>
             <a href="tel:+2347074526007">+234 707 452 6007</a>
+            <div className="mt-2 pt-1">
+              <NavSocials />
+            </div>
             <span>Nigeria</span>
           </div>
           <div>
@@ -304,6 +274,8 @@ export default function ProductsPage() {
             <a href="/about-us">About Us</a>
             <a href="/services">Service List</a>
             <a href="/products">Products</a>
+            <a href="/certificates">Certificates</a>
+            <a href="/book-online#contact">Contact Us</a>
           </div>
         </div>
         <div className="site-width footer-bottom">
