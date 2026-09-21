@@ -16,6 +16,7 @@ import {
   Shield,
   ShieldAlert,
   ShieldCheck,
+  X,
   ZoomIn,
 } from "lucide-react";
 import NavSocials from "@/components/NavSocials";
