@@ -1304,6 +1304,7 @@ html[data-theme="light"] .nav-social-btn:hover {
 }
 .certificates-section {
   padding: 125px 0;
+  scroll-margin-top: 78px;
   background: #0c1119;
 }
 .certificate-grid {

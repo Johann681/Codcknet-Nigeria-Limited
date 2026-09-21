@@ -42,7 +42,7 @@ const FAQ_LIST: FAQItem[] = [
     category: "speed-limiter",
     question: "Are your speed limiters FRSC approved and certified?",
     answer:
-      "Yes! Codcknet speed limiters are fully certified and compliant with Federal Road Safety Corps (FRSC) and Standards Organisation of Nigeria (SON) standards. Each installation comes with an official certificate of compliance required for road safety audits.",
+      "Codcknet provides speed-limiting solutions configured during installation and calibration according to regulatory and client requirements. Contact our team for certification and compliance details.",
     tags: ["frsc", "speed limiter", "certificate", "compliance", "son", "approved", "police", "vio"],
   },
   {
@@ -50,15 +50,15 @@ const FAQ_LIST: FAQItem[] = [
     category: "gps",
     question: "How does Codcknet GPS vehicle tracking work across Nigeria?",
     answer:
-      "Our trackers use high-accuracy GPS modules paired with multi-network GSM SIMs to provide uninterrupted real-time tracking nationwide. You can monitor live location, route history, speed alerts, geofences, and remotely immobilize the engine from your phone or PC.",
-    tags: ["gps", "tracking", "tracker", "location", "real time", "immobilizer", "engine", "nigeria"],
+      "GPS tracking provides real-time location, trip and route history, current speed, overspeed alerts, area-based alerts, geofencing, and multi-vehicle monitoring through a mobile application and web dashboard. It requires mobile network connectivity.",
+    tags: ["gps", "tracking", "tracker", "location", "real time", "engine", "nigeria"],
   },
   {
     id: "booking-installation",
     category: "booking",
     question: "How do I book an installation for my vehicle or fleet?",
     answer:
-      "You can book directly via our 'Book Online' page or reach out instantly on WhatsApp at 07074526007 or call 07040272129. We offer both on-site mobile installations at your premises and workshop appointments across Nigeria.",
+      "Installation takes a maximum of 3 hours depending on the vehicle model. It is handled by authorised Codcknet technicians and can be done at your preferred location or a selected technician workshop. Book online or contact us on WhatsApp at 07074526007 or by phone at 07040272129.",
     tags: ["book", "booking", "install", "installation", "schedule", "whatsapp", "phone", "location"],
   },
   {
@@ -66,7 +66,7 @@ const FAQ_LIST: FAQItem[] = [
     category: "fleet",
     question: "Can I manage and monitor multiple fleet vehicles from one dashboard?",
     answer:
-      "Yes. Our centralized Fleet Management portal allows you to track dozens or hundreds of vehicles simultaneously. It includes automated trip logs, fuel consumption estimates, driver behavior analytics, and maintenance alert scheduling.",
+      "Yes. Fleet management supports a centralised multi-vehicle dashboard, multiple manager accounts, driver identification, fleet reporting, idle-time monitoring, harsh braking and acceleration alerts, maintenance reminders, and report exporting. Fuel monitoring requires compatible dedicated sensors and is not standard.",
     tags: ["fleet", "multiple", "vehicles", "trucks", "buses", "fuel", "driver", "reports", "dashboard"],
   },
   {
@@ -74,7 +74,7 @@ const FAQ_LIST: FAQItem[] = [
     category: "booking",
     question: "How much does speed limiter installation or GPS tracking cost?",
     answer:
-      "Pricing depends on vehicle model, fleet size, and selected feature tiers. Contact our team for an instant customized quote with special discounts for multi-vehicle fleets.",
+      "Pricing varies by device type, quantity, package, and installation location. GPS tracking also requires a monthly or yearly subscription unless bundled. Contact our team for a custom quote; fleet and bulk discounts are available.",
     tags: ["cost", "price", "pricing", "quote", "discount", "fee", "how much", "naira", "rate"],
   },
   {
@@ -82,7 +82,7 @@ const FAQ_LIST: FAQItem[] = [
     category: "speed-limiter",
     question: "What warranty and after-sales support do you provide?",
     answer:
-      "All Codcknet hardware comes with a 12-month standard warranty. Our dedicated technical support engineers are available 24/7 via WhatsApp and phone to assist with diagnostics, device transfers, and recalibrations.",
+      "Codcknet technical support handles faults, repairs, and warranty replacements. Contact the team directly for support using WhatsApp at 07074526007 or phone at 07040272129.",
     tags: ["warranty", "support", "guarantee", "repair", "service", "maintenance", "help", "technical"],
   },
 ];

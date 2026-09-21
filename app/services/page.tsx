@@ -19,8 +19,8 @@ import NavSocials from "@/components/NavSocials";
 const services = [
   [
     "01",
-    "Speed Limiter Installation",
-    "FRSC-approved installations ensuring compliance, controlled speed, and safer roads for every vehicle in your operation.",
+    "Speed Limiter Sales & Installation",
+    "Approved speed limiter devices supplied, installed, and calibrated for compliance, controlled speed, and safer roads.",
     Gauge,
     "/images/limiter-installation.jpg",
   ],
@@ -33,8 +33,8 @@ const services = [
   ],
   [
     "03",
-    "Surveillance & CCTV Solutions",
-    "High-definition video monitoring and smart security systems to protect assets, manage access, and deter unauthorized activity.",
+    "Security Camera Sales & Installation",
+    "Quality security cameras supplied and installed for reliable video monitoring, access control, and asset protection.",
     Cctv,
     "/images/fleet-management.jpeg",
   ],

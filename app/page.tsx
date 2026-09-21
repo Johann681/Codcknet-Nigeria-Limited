@@ -16,8 +16,8 @@ import NavSocials from "@/components/NavSocials";
 const services = [
   [
     "01",
-    "Speed Limiter Installation",
-    "Ensure compliance and safety with approved speed limiter devices installed by experts.",
+    "Speed Limiter Sales & Installation",
+    "Get approved speed limiter devices supplied, installed, and calibrated by trained experts.",
     ShieldCheck,
   ],
   [
@@ -28,8 +28,8 @@ const services = [
   ],
   [
     "03",
-    "Surveillance & CCTV Solutions",
-    "High-definition video monitoring and smart security systems to protect assets, manage access, and deter unauthorized activity.",
+    "Security Camera Sales & Installation",
+    "Protect your property with quality security cameras supplied and installed for reliable monitoring and access control.",
     Cctv,
   ],
   [
@@ -178,7 +178,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <a className="outline-button centered-button" href="/certificates">
+          <a className="outline-button centered-button" href="/certificates#certificates-list">
             SEE ALL CERTIFICATIONS <ArrowRight size={16} />
           </a>
         </div>
