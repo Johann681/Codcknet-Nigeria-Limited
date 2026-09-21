@@ -10,6 +10,7 @@ import {
   HelpCircle,
   MessageCircle,
   Phone,
+  RotateCcw,
   Search,
   Send,
   Sparkles,
@@ -191,16 +192,16 @@ export default function ChatbotWidget() {
     if (!text || isLoading) return;
 
     const userMessage: ChatMessage = { role: "user", content: text };
-    const updatedHistory = [...messages, userMessage];
     
-    setMessages(updatedHistory);
+    // Clear previous chat messages immediately so only the active query is shown
+    setMessages([userMessage]);
     setInput("");
 
     // 1. Check local match first for instant UI response
     const localMatch = findLocalAnswer(text);
     if (localMatch) {
       setMessages([
-        ...updatedHistory,
+        userMessage,
         {
           role: "assistant",
           content: localMatch.answer,
@@ -220,7 +221,7 @@ export default function ChatbotWidget() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: text,
-          history: updatedHistory.map((m) => ({ role: m.role, content: m.content })),
+          history: [userMessage],
         }),
       });
 
@@ -242,7 +243,7 @@ export default function ChatbotWidget() {
           }
 
           setMessages([
-            ...updatedHistory,
+            userMessage,
             {
               role: "assistant",
               content: cleanContent,
@@ -261,7 +262,7 @@ export default function ChatbotWidget() {
 
     // 3. Fallback when AI endpoint fails or returns unhandled responses
     setMessages([
-      ...updatedHistory,
+      userMessage,
       {
         role: "assistant",
         content:
@@ -274,7 +275,7 @@ export default function ChatbotWidget() {
         suggestions: ["FRSC Speed Limiters", "GPS Tracking Features", "How to Book"],
       },
     ]);
-  }, [isLoading, messages]);
+  }, [isLoading]);
 
   function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -492,6 +493,22 @@ export default function ChatbotWidget() {
           {/* TAB 2: INTERACTIVE AI CHAT */}
           {activeTab === "chat" && (
             <div className="flex-1 flex flex-col min-h-0 bg-[#060c14]">
+              {/* Chat Sub-Header / New Chat Action */}
+              <div className="px-3 py-1.5 bg-[#0b1420]/90 border-b border-[rgba(148,163,184,0.1)] flex items-center justify-between text-[10.5px]">
+                <span className="text-[#8898aa] flex items-center gap-1">
+                  <Sparkles size={11} className="text-[#5f9df8]" /> AI Support
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setMessages(INITIAL_MESSAGES)}
+                  className="inline-flex items-center gap-1 text-[10px] font-semibold text-[#78879a] hover:text-[#5f9df8] transition-colors"
+                  title="Start a new conversation"
+                >
+                  <RotateCcw size={10} />
+                  <span>New Chat</span>
+                </button>
+              </div>
+
               {/* Message List */}
               <div className="flex-1 overflow-y-auto codcknet-chat-scroll p-3 space-y-3" aria-live="polite">
                 {messages.map((chatMessage, index) => (
