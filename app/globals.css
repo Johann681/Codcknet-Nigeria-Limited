@@ -3340,7 +3340,8 @@ html[data-theme="light"] .nav-social-btn:hover {
 .tracker-photo {
   position: relative;
   min-height: 520px;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .kit-photo:after,
@@ -3363,7 +3364,8 @@ html[data-theme="light"] .nav-social-btn:hover {
 .products-page .tracker-photo {
   background-color: #fff;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
 }
 .tracker-photo:after {
   content: none;

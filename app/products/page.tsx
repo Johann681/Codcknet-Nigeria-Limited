@@ -138,6 +138,32 @@ export default function ProductsPage() {
                 </a>
               </div>
             </article>
+
+            <article className="universal-tracker">
+              <div
+                className="tracker-photo"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, #07111d11, #07111d55), url('/images/cctv.jpeg')",
+                }}
+              >
+              </div>
+              <div>
+                <span className="product-tag">03 / SMART SURVEILLANCE</span>
+                <h3>
+                  Codcknet CCTV
+                  <br />
+                  <span>Security Camera System</span>
+                </h3>
+                <p>
+                  Reliable CCTV surveillance for property protection, monitoring,
+                  and real-time awareness.
+                </p>
+                <a className="product-link" href="/book-online">
+                  Request this product <ArrowRight size={15} />
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
