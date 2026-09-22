@@ -144,7 +144,7 @@ export default function ProductsPage() {
                 className="tracker-photo"
                 style={{
                   backgroundImage:
-                    "linear-gradient(180deg, #07111d11, #07111d55), url('/images/cctv.jpeg')",
+                    "linear-gradient(180deg, #07111d11, #07111d55), url('/images/tv.jpeg')",
                 }}
               >
               </div>

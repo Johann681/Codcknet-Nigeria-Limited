@@ -6,8 +6,8 @@ import NavSocials from "@/components/NavSocials";
 
 const bookings = [
   ["GPS Vehicle Tracking", "gps", "Real-time visibility for safer vehicles, better security, and more confident daily operations.", "/images/gps-tracker-yellow.jpeg"],
-  ["Speed Limiter Sales & Installation", "limiter", "Approved speed limiter devices supplied, installed, and calibrated in line with Nigerian road safety requirements.", "/images/vehicle speedlimiter device.jpeg"],
-  ["Security Camera Sales & Installation", "cctv", "Quality security cameras supplied and installed for reliable monitoring, access control, and asset protection.", "/images/fleet management consultation.jpeg"],
+  ["Speed Limiter Sales & Installation", "limiter", "Approved speed limiter devices supplied, installed, and calibrated in line with Nigerian road safety requirements.", "/images/speed.jpeg"],
+  ["Security Camera Sales & Installation", "cctv", "Quality security cameras supplied and installed for reliable monitoring, access control, and asset protection.", "/images/cctv.jpeg"],
 ] as const;
 
 export default function BookOnlinePage() {

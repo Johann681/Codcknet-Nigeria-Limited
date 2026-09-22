@@ -4063,9 +4063,7 @@ html[data-theme="light"] .main-nav.open {
 }
 .about-page .header-inner,
 .about-page .about-hero-content,
-.about-page .about-cta-inner,
-.about-page .footer-grid,
-.about-page .footer-bottom {
+.about-page .about-cta-inner {
   padding-inline: clamp(24px, 8vw, 116px);
 }
 .about-page .who-layout {
@@ -4099,9 +4097,7 @@ html[data-theme="light"] .main-nav.open {
   }
   .about-page .header-inner,
   .about-page .about-hero-content,
-  .about-page .about-cta-inner,
-  .about-page .footer-grid,
-  .about-page .footer-bottom {
+  .about-page .about-cta-inner {
     padding-inline: 15px;
   }
   .about-page .who-layout {
@@ -4124,9 +4120,7 @@ html[data-theme="light"] .main-nav.open {
 }
 .products-page .header-inner,
 .products-page .products-hero-content,
-.products-page .products-cta-inner,
-.products-page .footer-grid,
-.products-page .footer-bottom {
+.products-page .products-cta-inner {
   padding-inline: clamp(24px, 8vw, 116px);
 }
 .products-page .hardware-section > .site-width,
@@ -4148,9 +4142,7 @@ html[data-theme="light"] .main-nav.open {
   }
   .products-page .header-inner,
   .products-page .products-hero-content,
-  .products-page .products-cta-inner,
-  .products-page .footer-grid,
-  .products-page .footer-bottom {
+  .products-page .products-cta-inner {
     padding-inline: 15px;
   }
   .products-page .hardware-section > .site-width,
